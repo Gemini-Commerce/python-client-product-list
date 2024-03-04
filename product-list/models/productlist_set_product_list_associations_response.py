@@ -28,13 +28,13 @@ try:
 except ImportError:
     from typing_extensions import Self
 
-class ProductlistDeleteProductListAssociationResponse(BaseModel):
+class ProductlistSetProductListAssociationsResponse(BaseModel):
     """
-    ProductlistDeleteProductListAssociationResponse
+    ProductlistSetProductListAssociationsResponse
     """ # noqa: E501
-    association: Optional[ProductlistProductListAssociation] = None
+    associations: Optional[List[ProductlistProductListAssociation]] = None
     errors: Optional[List[ProductlistProductListAssociationError]] = None
-    __properties: ClassVar[List[str]] = ["association", "errors"]
+    __properties: ClassVar[List[str]] = ["associations", "errors"]
 
     model_config = {
         "populate_by_name": True,
@@ -54,7 +54,7 @@ class ProductlistDeleteProductListAssociationResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of ProductlistDeleteProductListAssociationResponse from a JSON string"""
+        """Create an instance of ProductlistSetProductListAssociationsResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,9 +73,13 @@ class ProductlistDeleteProductListAssociationResponse(BaseModel):
             },
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of association
-        if self.association:
-            _dict['association'] = self.association.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in associations (list)
+        _items = []
+        if self.associations:
+            for _item in self.associations:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['associations'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in errors (list)
         _items = []
         if self.errors:
@@ -87,7 +91,7 @@ class ProductlistDeleteProductListAssociationResponse(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Dict) -> Self:
-        """Create an instance of ProductlistDeleteProductListAssociationResponse from a dict"""
+        """Create an instance of ProductlistSetProductListAssociationsResponse from a dict"""
         if obj is None:
             return None
 
@@ -95,7 +99,7 @@ class ProductlistDeleteProductListAssociationResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "association": ProductlistProductListAssociation.from_dict(obj.get("association")) if obj.get("association") is not None else None,
+            "associations": [ProductlistProductListAssociation.from_dict(_item) for _item in obj.get("associations")] if obj.get("associations") is not None else None,
             "errors": [ProductlistProductListAssociationError.from_dict(_item) for _item in obj.get("errors")] if obj.get("errors") is not None else None
         })
         return _obj

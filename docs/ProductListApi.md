@@ -4,7 +4,6 @@ All URIs are relative to *https://product-list.api.gogemini.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bulk_update_product_list_associations**](ProductListApi.md#bulk_update_product_list_associations) | **POST** /productlist.ProductList/BulkUpdateProductListAssociations | Bulk update collection associations position
 [**create_product_list**](ProductListApi.md#create_product_list) | **POST** /productlist.ProductList/CreateProductList | Create Collection
 [**create_product_list_association**](ProductListApi.md#create_product_list_association) | **POST** /productlist.ProductList/CreateProductListAssociation | Create Collection/Product Association
 [**delete_product_list**](ProductListApi.md#delete_product_list) | **POST** /productlist.ProductList/DeleteProductList | Delete Collection
@@ -16,91 +15,12 @@ Method | HTTP request | Description
 [**get_product_lists_count**](ProductListApi.md#get_product_lists_count) | **POST** /productlist.ProductList/GetProductListsCount | Get Collection Product Count
 [**list_product_list_associations**](ProductListApi.md#list_product_list_associations) | **POST** /productlist.ProductList/ListProductListAssociations | List Collection/Product Associations
 [**list_product_lists**](ProductListApi.md#list_product_lists) | **POST** /productlist.ProductList/ListProductLists | List Collections
+[**product_list_bulk_update_product_list_associations**](ProductListApi.md#product_list_bulk_update_product_list_associations) | **POST** /productlist.ProductList/BulkUpdateProductListAssociations | 
 [**search_product_lists**](ProductListApi.md#search_product_lists) | **POST** /productlist.ProductList/SearchProductLists | Search Collections
 [**search_product_lists_by_ids**](ProductListApi.md#search_product_lists_by_ids) | **POST** /productlist.ProductList/SearchProductListsByIds | Search Collections by Ids
+[**set_product_list_associations**](ProductListApi.md#set_product_list_associations) | **POST** /productlist.ProductList/SetProductListAssociations | Set Collection/Product Associations
 [**update_product_list**](ProductListApi.md#update_product_list) | **POST** /productlist.ProductList/UpdateProductList | Update Collection
 
-
-# **bulk_update_product_list_associations**
-> RpcStatus bulk_update_product_list_associations(body)
-
-Bulk update collection associations position
-
-The BulkUpdateProductListAssociations endpoint updates the positions of specified associations.
-
-### Example
-
-* OAuth Authentication (standardAuthorization):
-
-```python
-import time
-import os
-import product-list
-from product-list.models.productlist_bulk_update_product_list_associations_request import ProductlistBulkUpdateProductListAssociationsRequest
-from product-list.models.rpc_status import RpcStatus
-from product-list.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://product-list.api.gogemini.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
-    host = "https://product-list.api.gogemini.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-configuration.access_token = os.environ["ACCESS_TOKEN"]
-
-# Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistBulkUpdateProductListAssociationsRequest() # ProductlistBulkUpdateProductListAssociationsRequest | 
-
-    try:
-        # Bulk update collection associations position
-        api_response = api_instance.bulk_update_product_list_associations(body)
-        print("The response of ProductListApi->bulk_update_product_list_associations:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ProductListApi->bulk_update_product_list_associations: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ProductlistBulkUpdateProductListAssociationsRequest**](ProductlistBulkUpdateProductListAssociationsRequest.md)|  | 
-
-### Return type
-
-[**RpcStatus**](RpcStatus.md)
-
-### Authorization
-
-[standardAuthorization](../README.md#standardAuthorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-**500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_product_list**
 > ProductlistCreateProductListResponse create_product_list(body)
@@ -111,7 +31,7 @@ The CreateProductList endpoint is used to create a new collection of products wi
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -133,7 +53,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -165,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -192,7 +116,7 @@ The CreateProductListAssociation endpoint is used to create an association betwe
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -214,7 +138,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -246,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -273,7 +201,7 @@ The DeleteProductList endpoint is used to delete an existing collection of produ
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -295,7 +223,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -327,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -354,7 +286,7 @@ The DeleteProductListAssociation endpoint is used to delete an association betwe
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -376,7 +308,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -408,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -435,7 +371,7 @@ The GetProductListAssociationsByProductGrn endpoint is used to get the associati
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -457,7 +393,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -489,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -516,7 +456,7 @@ The GetProductListByCode endpoint is used to retrieve an existing collection of 
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -538,7 +478,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -570,7 +514,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -597,7 +541,7 @@ The GetProductListById endpoint is used to retrieve an existing collection of pr
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -619,7 +563,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -651,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -678,7 +626,7 @@ The GetProductListByUrlKey endpoint is used to retrieve an existing collection o
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -700,7 +648,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -732,7 +684,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -759,7 +711,7 @@ The GetProductListsCount endpoint is used to get the number of products associat
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -781,7 +733,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -813,7 +769,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -840,7 +796,7 @@ The ListProductListAssociations endpoint is used to list the associations betwee
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -862,7 +818,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -894,7 +854,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -921,7 +881,7 @@ The ListProductLists endpoint is used to retrieve a list of existing collections
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -943,7 +903,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -975,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -993,6 +957,85 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **product_list_bulk_update_product_list_associations**
+> object product_list_bulk_update_product_list_associations(body)
+
+
+
+### Example
+
+* Api Key Authentication (Authorization):
+
+```python
+import time
+import os
+import product-list
+from product-list.models.productlist_bulk_update_product_list_associations_request import ProductlistBulkUpdateProductListAssociationsRequest
+from product-list.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://product-list.api.gogemini.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = product-list.Configuration(
+    host = "https://product-list.api.gogemini.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with product-list.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = product-list.ProductListApi(api_client)
+    body = product-list.ProductlistBulkUpdateProductListAssociationsRequest() # ProductlistBulkUpdateProductListAssociationsRequest | 
+
+    try:
+        api_response = api_instance.product_list_bulk_update_product_list_associations(body)
+        print("The response of ProductListApi->product_list_bulk_update_product_list_associations:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ProductListApi->product_list_bulk_update_product_list_associations: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ProductlistBulkUpdateProductListAssociationsRequest**](ProductlistBulkUpdateProductListAssociationsRequest.md)|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **search_product_lists**
 > ProductlistSearchProductListsResponse search_product_lists(body)
 
@@ -1002,7 +1045,7 @@ The SearchProductLists endpoint is used to retrieve a list of existing collectio
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -1024,7 +1067,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -1056,7 +1103,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1083,7 +1130,7 @@ The SearchProductListsByIds endpoint is used to retrieve a list of existing coll
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -1105,7 +1152,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -1137,7 +1188,92 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**401** | Unauthorized |  -  |
+**500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_product_list_associations**
+> ProductlistSetProductListAssociationsResponse set_product_list_associations(body)
+
+Set Collection/Product Associations
+
+The SetProductListAssociations endpoint is used to set the associations between a collection and a list of products.
+
+### Example
+
+* Api Key Authentication (Authorization):
+
+```python
+import time
+import os
+import product-list
+from product-list.models.productlist_set_product_list_associations_request import ProductlistSetProductListAssociationsRequest
+from product-list.models.productlist_set_product_list_associations_response import ProductlistSetProductListAssociationsResponse
+from product-list.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://product-list.api.gogemini.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = product-list.Configuration(
+    host = "https://product-list.api.gogemini.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with product-list.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = product-list.ProductListApi(api_client)
+    body = product-list.ProductlistSetProductListAssociationsRequest() # ProductlistSetProductListAssociationsRequest | 
+
+    try:
+        # Set Collection/Product Associations
+        api_response = api_instance.set_product_list_associations(body)
+        print("The response of ProductListApi->set_product_list_associations:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ProductListApi->set_product_list_associations: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ProductlistSetProductListAssociationsRequest**](ProductlistSetProductListAssociationsRequest.md)|  | 
+
+### Return type
+
+[**ProductlistSetProductListAssociationsResponse**](ProductlistSetProductListAssociationsResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1164,7 +1300,7 @@ The UpdateProductList endpoint is used to update an existing collection of produ
 
 ### Example
 
-* OAuth Authentication (standardAuthorization):
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -1186,7 +1322,11 @@ configuration = product-list.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-configuration.access_token = os.environ["ACCESS_TOKEN"]
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with product-list.ApiClient(configuration) as api_client:
@@ -1218,7 +1358,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 

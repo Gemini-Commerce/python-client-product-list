@@ -16,10 +16,10 @@
 import unittest
 import datetime
 
-from product-list.models.productlist_list_product_list_associations_response import ProductlistListProductListAssociationsResponse
+from product-list.models.productlist_set_product_list_associations_response import ProductlistSetProductListAssociationsResponse
 
-class TestProductlistListProductListAssociationsResponse(unittest.TestCase):
-    """ProductlistListProductListAssociationsResponse unit test stubs"""
+class TestProductlistSetProductListAssociationsResponse(unittest.TestCase):
+    """ProductlistSetProductListAssociationsResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,16 +27,16 @@ class TestProductlistListProductListAssociationsResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ProductlistListProductListAssociationsResponse:
-        """Test ProductlistListProductListAssociationsResponse
+    def make_instance(self, include_optional) -> ProductlistSetProductListAssociationsResponse:
+        """Test ProductlistSetProductListAssociationsResponse
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ProductlistListProductListAssociationsResponse`
+        # uncomment below to create an instance of `ProductlistSetProductListAssociationsResponse`
         """
-        model = ProductlistListProductListAssociationsResponse()
+        model = ProductlistSetProductListAssociationsResponse()
         if include_optional:
-            return ProductlistListProductListAssociationsResponse(
+            return ProductlistSetProductListAssociationsResponse(
                 associations = [
                     product-list.models.productlist_product_list_association.productlistProductListAssociation(
                         id = '', 
@@ -44,15 +44,19 @@ class TestProductlistListProductListAssociationsResponse(unittest.TestCase):
                         position = 56, 
                         product_grn = '', )
                     ],
-                next_page_token = ''
+                errors = [
+                    product-list.models.productlist_product_list_association_error.productlistProductListAssociationError(
+                        code = '', 
+                        message = '', )
+                    ]
             )
         else:
-            return ProductlistListProductListAssociationsResponse(
+            return ProductlistSetProductListAssociationsResponse(
         )
         """
 
-    def testProductlistListProductListAssociationsResponse(self):
-        """Test ProductlistListProductListAssociationsResponse"""
+    def testProductlistSetProductListAssociationsResponse(self):
+        """Test ProductlistSetProductListAssociationsResponse"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

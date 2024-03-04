@@ -16,10 +16,10 @@
 import unittest
 import datetime
 
-from product-list.models.productlist_product_list_association import ProductlistProductListAssociation
+from product-list.models.set_product_list_associations_request_association import SetProductListAssociationsRequestAssociation
 
-class TestProductlistProductListAssociation(unittest.TestCase):
-    """ProductlistProductListAssociation unit test stubs"""
+class TestSetProductListAssociationsRequestAssociation(unittest.TestCase):
+    """SetProductListAssociationsRequestAssociation unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,28 +27,27 @@ class TestProductlistProductListAssociation(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ProductlistProductListAssociation:
-        """Test ProductlistProductListAssociation
+    def make_instance(self, include_optional) -> SetProductListAssociationsRequestAssociation:
+        """Test SetProductListAssociationsRequestAssociation
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ProductlistProductListAssociation`
+        # uncomment below to create an instance of `SetProductListAssociationsRequestAssociation`
         """
-        model = ProductlistProductListAssociation()
+        model = SetProductListAssociationsRequestAssociation()
         if include_optional:
-            return ProductlistProductListAssociation(
-                id = '',
+            return SetProductListAssociationsRequestAssociation(
                 list_id = '',
                 position = 56,
                 product_grn = ''
             )
         else:
-            return ProductlistProductListAssociation(
+            return SetProductListAssociationsRequestAssociation(
         )
         """
 
-    def testProductlistProductListAssociation(self):
-        """Test ProductlistProductListAssociation"""
+    def testSetProductListAssociationsRequestAssociation(self):
+        """Test SetProductListAssociationsRequestAssociation"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

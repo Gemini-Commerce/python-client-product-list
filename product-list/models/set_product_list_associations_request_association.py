@@ -20,21 +20,21 @@ import json
 
 
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel
-from product-list.models.productlist_product_list_association import ProductlistProductListAssociation
-from product-list.models.productlist_product_list_association_error import ProductlistProductListAssociationError
+from pydantic import BaseModel, StrictInt, StrictStr
+from pydantic import Field
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
-class ProductlistDeleteProductListAssociationResponse(BaseModel):
+class SetProductListAssociationsRequestAssociation(BaseModel):
     """
-    ProductlistDeleteProductListAssociationResponse
+    SetProductListAssociationsRequestAssociation
     """ # noqa: E501
-    association: Optional[ProductlistProductListAssociation] = None
-    errors: Optional[List[ProductlistProductListAssociationError]] = None
-    __properties: ClassVar[List[str]] = ["association", "errors"]
+    list_id: Optional[StrictStr] = Field(default=None, alias="listId")
+    position: Optional[StrictInt] = None
+    product_grn: Optional[StrictStr] = Field(default=None, alias="productGrn")
+    __properties: ClassVar[List[str]] = ["listId", "position", "productGrn"]
 
     model_config = {
         "populate_by_name": True,
@@ -54,7 +54,7 @@ class ProductlistDeleteProductListAssociationResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of ProductlistDeleteProductListAssociationResponse from a JSON string"""
+        """Create an instance of SetProductListAssociationsRequestAssociation from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,21 +73,11 @@ class ProductlistDeleteProductListAssociationResponse(BaseModel):
             },
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of association
-        if self.association:
-            _dict['association'] = self.association.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in errors (list)
-        _items = []
-        if self.errors:
-            for _item in self.errors:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['errors'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Dict) -> Self:
-        """Create an instance of ProductlistDeleteProductListAssociationResponse from a dict"""
+        """Create an instance of SetProductListAssociationsRequestAssociation from a dict"""
         if obj is None:
             return None
 
@@ -95,8 +85,9 @@ class ProductlistDeleteProductListAssociationResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "association": ProductlistProductListAssociation.from_dict(obj.get("association")) if obj.get("association") is not None else None,
-            "errors": [ProductlistProductListAssociationError.from_dict(_item) for _item in obj.get("errors")] if obj.get("errors") is not None else None
+            "listId": obj.get("listId"),
+            "position": obj.get("position"),
+            "productGrn": obj.get("productGrn")
         })
         return _obj
 
