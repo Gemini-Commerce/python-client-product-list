@@ -1,4 +1,4 @@
-# product-list.ProductListApi
+# productlist.ProductListApi
 
 All URIs are relative to *https://product-list.api.gogemini.io*
 
@@ -34,17 +34,15 @@ The CreateProductList endpoint is used to create a new collection of products wi
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_create_product_list_request import ProductlistCreateProductListRequest
-from product-list.models.productlist_create_product_list_response import ProductlistCreateProductListResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_create_product_list_request import ProductlistCreateProductListRequest
+from productlist.models.productlist_create_product_list_response import ProductlistCreateProductListResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -60,10 +58,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistCreateProductListRequest() # ProductlistCreateProductListRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistCreateProductListRequest() # ProductlistCreateProductListRequest | 
 
     try:
         # Create Collection
@@ -119,17 +117,15 @@ The CreateProductListAssociation endpoint is used to create an association betwe
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_create_product_list_association_request import ProductlistCreateProductListAssociationRequest
-from product-list.models.productlist_create_product_list_association_response import ProductlistCreateProductListAssociationResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_create_product_list_association_request import ProductlistCreateProductListAssociationRequest
+from productlist.models.productlist_create_product_list_association_response import ProductlistCreateProductListAssociationResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -145,10 +141,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistCreateProductListAssociationRequest() # ProductlistCreateProductListAssociationRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistCreateProductListAssociationRequest() # ProductlistCreateProductListAssociationRequest | 
 
     try:
         # Create Collection/Product Association
@@ -204,17 +200,15 @@ The DeleteProductList endpoint is used to delete an existing collection of produ
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_delete_product_list_request import ProductlistDeleteProductListRequest
-from product-list.models.productlist_delete_product_list_response import ProductlistDeleteProductListResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_delete_product_list_request import ProductlistDeleteProductListRequest
+from productlist.models.productlist_delete_product_list_response import ProductlistDeleteProductListResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -230,10 +224,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistDeleteProductListRequest() # ProductlistDeleteProductListRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistDeleteProductListRequest() # ProductlistDeleteProductListRequest | 
 
     try:
         # Delete Collection
@@ -289,17 +283,15 @@ The DeleteProductListAssociation endpoint is used to delete an association betwe
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_delete_product_list_association_request import ProductlistDeleteProductListAssociationRequest
-from product-list.models.productlist_delete_product_list_association_response import ProductlistDeleteProductListAssociationResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_delete_product_list_association_request import ProductlistDeleteProductListAssociationRequest
+from productlist.models.productlist_delete_product_list_association_response import ProductlistDeleteProductListAssociationResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -315,10 +307,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistDeleteProductListAssociationRequest() # ProductlistDeleteProductListAssociationRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistDeleteProductListAssociationRequest() # ProductlistDeleteProductListAssociationRequest | 
 
     try:
         # Delete Collection/Product Association
@@ -374,17 +366,15 @@ The GetProductListAssociationsByProductGrn endpoint is used to get the associati
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_get_product_list_associations_by_product_grn_request import ProductlistGetProductListAssociationsByProductGrnRequest
-from product-list.models.productlist_get_product_list_associations_by_product_grn_response import ProductlistGetProductListAssociationsByProductGrnResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_get_product_list_associations_by_product_grn_request import ProductlistGetProductListAssociationsByProductGrnRequest
+from productlist.models.productlist_get_product_list_associations_by_product_grn_response import ProductlistGetProductListAssociationsByProductGrnResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -400,10 +390,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistGetProductListAssociationsByProductGrnRequest() # ProductlistGetProductListAssociationsByProductGrnRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistGetProductListAssociationsByProductGrnRequest() # ProductlistGetProductListAssociationsByProductGrnRequest | 
 
     try:
         # Get Collection/Product Associations by Product GRN
@@ -459,17 +449,15 @@ The GetProductListByCode endpoint is used to retrieve an existing collection of 
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_get_product_list_by_code_request import ProductlistGetProductListByCodeRequest
-from product-list.models.productlist_get_product_list_by_code_response import ProductlistGetProductListByCodeResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_get_product_list_by_code_request import ProductlistGetProductListByCodeRequest
+from productlist.models.productlist_get_product_list_by_code_response import ProductlistGetProductListByCodeResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -485,10 +473,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistGetProductListByCodeRequest() # ProductlistGetProductListByCodeRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistGetProductListByCodeRequest() # ProductlistGetProductListByCodeRequest | 
 
     try:
         # Get Collection by Code
@@ -544,17 +532,15 @@ The GetProductListById endpoint is used to retrieve an existing collection of pr
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_get_product_list_by_id_request import ProductlistGetProductListByIdRequest
-from product-list.models.productlist_get_product_list_by_id_response import ProductlistGetProductListByIdResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_get_product_list_by_id_request import ProductlistGetProductListByIdRequest
+from productlist.models.productlist_get_product_list_by_id_response import ProductlistGetProductListByIdResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -570,10 +556,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistGetProductListByIdRequest() # ProductlistGetProductListByIdRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistGetProductListByIdRequest() # ProductlistGetProductListByIdRequest | 
 
     try:
         # Get Collection by Id
@@ -629,17 +615,15 @@ The GetProductListByUrlKey endpoint is used to retrieve an existing collection o
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_get_product_list_by_url_key_request import ProductlistGetProductListByUrlKeyRequest
-from product-list.models.productlist_get_product_list_by_url_key_response import ProductlistGetProductListByUrlKeyResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_get_product_list_by_url_key_request import ProductlistGetProductListByUrlKeyRequest
+from productlist.models.productlist_get_product_list_by_url_key_response import ProductlistGetProductListByUrlKeyResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -655,10 +639,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistGetProductListByUrlKeyRequest() # ProductlistGetProductListByUrlKeyRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistGetProductListByUrlKeyRequest() # ProductlistGetProductListByUrlKeyRequest | 
 
     try:
         # Get Collection by Url Key
@@ -714,17 +698,15 @@ The GetProductListsCount endpoint is used to get the number of products associat
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_get_product_lists_count_request import ProductlistGetProductListsCountRequest
-from product-list.models.productlist_get_product_lists_count_response import ProductlistGetProductListsCountResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_get_product_lists_count_request import ProductlistGetProductListsCountRequest
+from productlist.models.productlist_get_product_lists_count_response import ProductlistGetProductListsCountResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -740,10 +722,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistGetProductListsCountRequest() # ProductlistGetProductListsCountRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistGetProductListsCountRequest() # ProductlistGetProductListsCountRequest | 
 
     try:
         # Get Collection Product Count
@@ -799,17 +781,15 @@ The ListProductListAssociations endpoint is used to list the associations betwee
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_list_product_list_associations_request import ProductlistListProductListAssociationsRequest
-from product-list.models.productlist_list_product_list_associations_response import ProductlistListProductListAssociationsResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_list_product_list_associations_request import ProductlistListProductListAssociationsRequest
+from productlist.models.productlist_list_product_list_associations_response import ProductlistListProductListAssociationsResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -825,10 +805,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistListProductListAssociationsRequest() # ProductlistListProductListAssociationsRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistListProductListAssociationsRequest() # ProductlistListProductListAssociationsRequest | 
 
     try:
         # List Collection/Product Associations
@@ -884,17 +864,15 @@ The ListProductLists endpoint is used to retrieve a list of existing collections
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_list_product_lists_request import ProductlistListProductListsRequest
-from product-list.models.productlist_list_product_lists_response import ProductlistListProductListsResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_list_product_lists_request import ProductlistListProductListsRequest
+from productlist.models.productlist_list_product_lists_response import ProductlistListProductListsResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -910,10 +888,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistListProductListsRequest() # ProductlistListProductListsRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistListProductListsRequest() # ProductlistListProductListsRequest | 
 
     try:
         # List Collections
@@ -967,16 +945,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_bulk_update_product_list_associations_request import ProductlistBulkUpdateProductListAssociationsRequest
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_bulk_update_product_list_associations_request import ProductlistBulkUpdateProductListAssociationsRequest
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -992,10 +968,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistBulkUpdateProductListAssociationsRequest() # ProductlistBulkUpdateProductListAssociationsRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistBulkUpdateProductListAssociationsRequest() # ProductlistBulkUpdateProductListAssociationsRequest | 
 
     try:
         api_response = api_instance.product_list_bulk_update_product_list_associations(body)
@@ -1048,17 +1024,15 @@ The SearchProductLists endpoint is used to retrieve a list of existing collectio
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_search_product_lists_request import ProductlistSearchProductListsRequest
-from product-list.models.productlist_search_product_lists_response import ProductlistSearchProductListsResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_search_product_lists_request import ProductlistSearchProductListsRequest
+from productlist.models.productlist_search_product_lists_response import ProductlistSearchProductListsResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -1074,10 +1048,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistSearchProductListsRequest() # ProductlistSearchProductListsRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistSearchProductListsRequest() # ProductlistSearchProductListsRequest | 
 
     try:
         # Search Collections
@@ -1133,17 +1107,15 @@ The SearchProductListsByIds endpoint is used to retrieve a list of existing coll
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_search_product_lists_by_ids_request import ProductlistSearchProductListsByIdsRequest
-from product-list.models.productlist_search_product_lists_by_ids_response import ProductlistSearchProductListsByIdsResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_search_product_lists_by_ids_request import ProductlistSearchProductListsByIdsRequest
+from productlist.models.productlist_search_product_lists_by_ids_response import ProductlistSearchProductListsByIdsResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -1159,10 +1131,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistSearchProductListsByIdsRequest() # ProductlistSearchProductListsByIdsRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistSearchProductListsByIdsRequest() # ProductlistSearchProductListsByIdsRequest | 
 
     try:
         # Search Collections by Ids
@@ -1218,17 +1190,15 @@ The SetProductListAssociations endpoint is used to set the associations between 
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_set_product_list_associations_request import ProductlistSetProductListAssociationsRequest
-from product-list.models.productlist_set_product_list_associations_response import ProductlistSetProductListAssociationsResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_set_product_list_associations_request import ProductlistSetProductListAssociationsRequest
+from productlist.models.productlist_set_product_list_associations_response import ProductlistSetProductListAssociationsResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -1244,10 +1214,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistSetProductListAssociationsRequest() # ProductlistSetProductListAssociationsRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistSetProductListAssociationsRequest() # ProductlistSetProductListAssociationsRequest | 
 
     try:
         # Set Collection/Product Associations
@@ -1303,17 +1273,15 @@ The UpdateProductList endpoint is used to update an existing collection of produ
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
-import product-list
-from product-list.models.productlist_update_product_list_request import ProductlistUpdateProductListRequest
-from product-list.models.productlist_update_product_list_response import ProductlistUpdateProductListResponse
-from product-list.rest import ApiException
+import productlist
+from productlist.models.productlist_update_product_list_request import ProductlistUpdateProductListRequest
+from productlist.models.productlist_update_product_list_response import ProductlistUpdateProductListResponse
+from productlist.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://product-list.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
-configuration = product-list.Configuration(
+configuration = productlist.Configuration(
     host = "https://product-list.api.gogemini.io"
 )
 
@@ -1329,10 +1297,10 @@ configuration.api_key['Authorization'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with product-list.ApiClient(configuration) as api_client:
+with productlist.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = product-list.ProductListApi(api_client)
-    body = product-list.ProductlistUpdateProductListRequest() # ProductlistUpdateProductListRequest | 
+    api_instance = productlist.ProductListApi(api_client)
+    body = productlist.ProductlistUpdateProductListRequest() # ProductlistUpdateProductListRequest | 
 
     try:
         # Update Collection
